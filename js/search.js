@@ -1,17 +1,19 @@
 $(function(){
 
+	// Google maps scripts
 	var map;
 	var infoWindow;
 	var service;
+	var brainstation = {lat: 43.650033, lng: -79.391594 };
+	var markersArr = [];
 
+	$('[name=searchquery]').on('change.radiocheck', function(){
+		clearOverlays();	
 
-	// Initialize google maps
-	initMap();
-
-	$('[name=searchquery]').change(function(){
 		$('[name=searchquery]:checked').each(function(){
 			var request = {
-				bounds: map.getBounds(),
+				location: brainstation,
+				radius: 1000,
 				keyword: $(this).val()
 			};
 			service = new google.maps.places.PlacesService(map);
@@ -20,12 +22,16 @@ $(function(){
 		});
 	});
 
+
+
+	// Initialize google maps
+	initMap();
+
 	function initMap(){
-		var brainstation = {lat: 43.650033, lng: -79.391594 };
 
 		map = new google.maps.Map(document.getElementById('google-map'), {
 			center: brainstation,
-			zoom: 13
+			zoom: 12
 		});
 
 		infoWindow = new google.maps.InfoWindow();
@@ -59,6 +65,8 @@ $(function(){
 			position: placeLoc
 		});
 
+		markersArr.push(marker);
+
 		google.maps.event.addListener(marker, 'click', function() {
 			service.getDetails(place, function(result, status) {
 				if (status !== google.maps.places.PlacesServiceStatus.OK) {
@@ -66,7 +74,6 @@ $(function(){
 					return;
 				}
 
-				console.log(result);
 				var name = (typeof result.name === 'undefined') ? 'no business name' : result.name;	
 				var address = (typeof result.formatted_address === 'undefined') ? 'no address' : result.formatted_address;
 				var pNumber = (typeof result.formatted_phone_number === 'undefined') ? '<em>no phone number</em>' : result.formatted_phone_number;
@@ -76,6 +83,13 @@ $(function(){
 				infoWindow.open(map, marker);
 			});
 		});
+	};
+
+	function clearOverlays() {
+		for (var i = 0; i < markersArr.length; i++ ) {
+			markersArr[i].setMap(null);
+		}
+		markersArr.length = 0;
 	};
 
 });

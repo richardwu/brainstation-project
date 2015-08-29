@@ -39,12 +39,20 @@
 		</div>
 	</div>	
 
-	<div id="search-bar">
-		<input type="checkbox" name="searchquery" value="Homeless shelter">Homeless shelter
-		<input type="checkbox" name="searchquery" value="Soup kitchen">Soup kitchen
-		<input type="checkbox" name="searchquery" value="Food bank">Food bank
-	</div>
+	<label class="checkbox" for="checkbox1">
+		<input type="checkbox" data-toggle="checkbox" value="Homeless shelter" id="checkbox1" name="searchquery" required>
+		Homeless shelter
+	</label>
 
+	<label class="checkbox" for="checkbox2">
+		<input type="checkbox" data-toggle="checkbox" value="Soup kitchen" id="checkbox2" name="searchquery" required>
+		Soup kitchen
+	</label>
+
+	<label class="checkbox" for="checkbox3">
+		<input type="checkbox" data-toggle="checkbox" value="Food bank" id="checkbox3" name="searchquery" required>
+		Food bank
+	</label>
 
 	<div id="google-map"></div>
 
@@ -55,6 +63,13 @@
 	<script type="text/javascript" src="js/respond.min.js"></script>
 	<script type="text/javascript" src="js/radiocheck.js"></script>
 	<script type="text/javascript" src="js/flat-ui.min.js"></script>
+
+	
+	<script type="text/javascript">
+		$(':checkbox').radiocheck();
+	</script>
+	
+
 	<script
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCv0854KBIvMEyf4VnJ1bMf839kUQY0DW0&libraries=places">
 	</script>

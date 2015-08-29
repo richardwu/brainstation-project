@@ -4,6 +4,7 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/flat-ui.min.css">
 	<link rel="stylesheet" type="text/css" href="css/general-styles.css">
+	<link rel="stylesheet" type="text/css" href="css/search.css">
 </head>
 <body>
 	
@@ -31,8 +32,21 @@
 		</div><!-- /.container-fluid -->
 	</nav>
 
+	<div id="search-donation-jumbo" class="jumbotron">
+		<div class="container">
+			<h1>Make a donation</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit tincidunt pretium. Nam et dapibus tellus, quis vulputate turpis. Pellentesque habitant. Aenean ornare venenatis sem et aliquet. Vivamus vitae cursus odio. Integer purus tellus, malesuada vel lacus sed, pellentesque semper lacus. Suspendisse luctus velit.</p>
+		</div>
+	</div>	
+
+	<div id="search-bar">
+		<input type="checkbox" name="searchquery" value="Homeless shelter">Homeless shelter
+		<input type="checkbox" name="searchquery" value="Soup kitchen">Soup kitchen
+		<input type="checkbox" name="searchquery" value="Food bank">Food bank
+	</div>
 
 
+	<div id="google-map"></div>
 
 	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -41,5 +55,9 @@
 	<script type="text/javascript" src="js/respond.min.js"></script>
 	<script type="text/javascript" src="js/radiocheck.js"></script>
 	<script type="text/javascript" src="js/flat-ui.min.js"></script>
+	<script
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCv0854KBIvMEyf4VnJ1bMf839kUQY0DW0&libraries=places">
+	</script>
+	<script type="text/javascript" src="js/search.js"></script>
 </body>
 </html>

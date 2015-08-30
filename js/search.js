@@ -16,8 +16,7 @@ $(function(){
 		// Create a service and render markers for each checkbox
 		$('[name=searchquery]:checked').each(function(){
 			var request = {
-				location: brainstation,
-				radius: 1000,
+				bounds: map.getBounds(),
 				keyword: $(this).val()
 			};
 			service = new google.maps.places.PlacesService(map);
@@ -33,7 +32,7 @@ $(function(){
 
 		map = new google.maps.Map(document.getElementById('google-map'), {
 			center: brainstation,
-			zoom: 12
+			zoom: 14
 		});
 
 		infoWindow = new google.maps.InfoWindow();

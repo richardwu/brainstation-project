@@ -3,3 +3,39 @@
 	color: white;
 	margin: 0;
 }
+
+#charity-jumbo {
+	background-color: #2ECC71;
+}
+
+.charity-block {
+	margin: 20px 0;
+	text-align: center;
+}
+
+
+img {
+	height: 300px;
+	width: 200px;
+}
+
+.charity-info {
+	margin: 20px 0;
+}
+
+.expand-wrapper{
+	display: block;
+	margin: 20px 0;
+}
+
+.expand-charity {
+	display: inline-block;
+	color: white;
+	font-size: 400%;
+	height: 72px;
+}
+
+.expand-charity:hover{
+	color: #3498DB;
+	cursor: pointer;
+}

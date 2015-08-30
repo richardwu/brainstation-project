@@ -7,9 +7,13 @@ $(function(){
 	var brainstation = {lat: 43.650033, lng: -79.391594 };
 	var markersArr = [];
 
+	// Listener for checkboxes
 	$('[name=searchquery]').on('change.radiocheck', function(){
+
+		// Clear map markers
 		clearOverlays();	
 
+		// Create a service and render markers for each checkbox
 		$('[name=searchquery]:checked').each(function(){
 			var request = {
 				location: brainstation,
@@ -21,8 +25,6 @@ $(function(){
 			service.nearbySearch(request, callback);
 		});
 	});
-
-
 
 	// Initialize google maps
 	initMap();
@@ -77,7 +79,7 @@ $(function(){
 				var name = (typeof result.name === 'undefined') ? 'no business name' : result.name;	
 				var address = (typeof result.formatted_address === 'undefined') ? 'no address' : result.formatted_address;
 				var pNumber = (typeof result.formatted_phone_number === 'undefined') ? '<em>no phone number</em>' : result.formatted_phone_number;
-				var website = (typeof result.website === 'undefined') ? '<em>no website</em>' : result.website;
+				var website = (typeof result.website === 'undefined') ? '<em>no website</em>' : '<a href="'+result.website+'">'+result.website+'</a>';
 
 				infoWindow.setContent('<strong>' + name + '</strong><br/>'+ address + '<br/>'+pNumber + '<br/>' + website);
 				infoWindow.open(map, marker);

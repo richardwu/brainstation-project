@@ -1,8 +1,24 @@
 #search-donation-jumbo {
 	background-color: #3498DB;
 	color: white;
+	margin: 0;
 }
 
 #google-map {
 	height: 400px;
+}
+
+label.checkbox {
+	display: inline;
+	margin: 20px;
+}
+
+#search-header {
+	text-align: center;
+	background-color: #E74C3C;
+	padding: 30px;
+}
+
+.spacer {
+	clear: both;
 }

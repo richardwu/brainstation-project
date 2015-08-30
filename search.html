@@ -24,7 +24,8 @@
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav navbar-right">
+				<ul class="nav navbar-nav navbar-right">	
+					<li><a href="donate.html">Donate</a></li>
 					<li class="active"><a href="search.html">Locator</a></li>
 					<li><a href="about.html">About</a></li>
 				</ul>
@@ -32,27 +33,26 @@
 		</div><!-- /.container-fluid -->
 	</nav>
 
-	<div id="search-donation-jumbo" class="jumbotron">
-		<div class="container">
-			<h1>Make a donation</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit tincidunt pretium. Nam et dapibus tellus, quis vulputate turpis. Pellentesque habitant. Aenean ornare venenatis sem et aliquet. Vivamus vitae cursus odio. Integer purus tellus, malesuada vel lacus sed, pellentesque semper lacus. Suspendisse luctus velit.</p>
-		</div>
-	</div>	
+	<div id="search-header">
+		<h4>Nearby services</h4>
 
-	<label class="checkbox" for="checkbox1">
-		<input type="checkbox" data-toggle="checkbox" value="Homeless shelter" id="checkbox1" name="searchquery" required>
-		Homeless shelter
-	</label>
+		<label class="checkbox" for="checkbox1">
+			<input type="checkbox" data-toggle="checkbox" value="Homeless shelter" id="checkbox1" name="searchquery" required>
+			Homeless shelters
+		</label>
 
-	<label class="checkbox" for="checkbox2">
-		<input type="checkbox" data-toggle="checkbox" value="Soup kitchen" id="checkbox2" name="searchquery" required>
-		Soup kitchen
-	</label>
+		<label class="checkbox" for="checkbox2">
+			<input type="checkbox" data-toggle="checkbox" value="Soup kitchen" id="checkbox2" name="searchquery" required>
+			Soup kitchens
+		</label>
 
-	<label class="checkbox" for="checkbox3">
-		<input type="checkbox" data-toggle="checkbox" value="Food bank" id="checkbox3" name="searchquery" required>
-		Food bank
-	</label>
+		<label class="checkbox" for="checkbox3">
+			<input type="checkbox" data-toggle="checkbox" value="Food bank" id="checkbox3" name="searchquery" required>
+			Food banks
+		</label>
+	</div>
+
+	<div class="spacer"></div>
 
 	<div id="google-map"></div>
 
@@ -66,7 +66,7 @@
 
 	
 	<script type="text/javascript">
-		$(':checkbox').radiocheck();
+	$(':checkbox').radiocheck();
 	</script>
 	
 

@@ -1,0 +1,28 @@
+#search-donation-jumbo {
+	background-color: #09a0e1;
+}
+
+.charity-block {
+	margin: 20px 0;
+	text-align: center;
+}
+
+#charity-jumbo {
+	background-color: #2ECC71;
+	color: white;
+	text-align: center;
+}
+
+ul {
+	list-style-type: none;
+}
+
+ul a {
+	font-size: 120%;
+	color: white;
+}
+
+.charity-column img {
+	height: 300px;
+	width: 200px;
+}
